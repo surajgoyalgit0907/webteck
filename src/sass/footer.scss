@@ -1,0 +1,276 @@
+@import './variable.scss';
+@import './mixin.scss';
+
+
+footer {
+    width: 100%;
+    height: 450px;
+    background-image: url('../assets/images/footer_back_Img.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+
+    .f_logo {
+        width: 200px;
+    }
+
+    .f_social_box ul {
+        display: flex;
+
+        & li {
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+            background: $white-color;
+            @include flexProperty;
+            border-radius: 50%;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.09);
+            transition: all .3s ease;
+
+            &:hover {
+                transform: scale(1.09);
+                transition: all .3s ease;
+            }
+
+            & a svg {
+                font-size: 22px;
+                color: $primary-color;
+            }
+        }
+    }
+
+    .f_logo_box p {
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-color;
+    }
+
+    .f_links h3,
+    .f_getintouch h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $secondary-color;
+        position: relative;
+    }
+
+    .f_links h3::before,
+    .f_getintouch h3::before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 80px;
+        height: 2px;
+        background: $primary-color;
+    }
+
+    .f_links h3::after,
+    .f_getintouch h3::after {
+        content: '';
+        position: absolute;
+        top: 36px;
+        left: 80px;
+        width: 10px;
+        height: 10px;
+        background: $primary-color;
+        border-radius: 50%;
+    }
+
+    .f_links ul li {
+        margin-bottom: 10px;
+
+        & a {
+            color: $text-color;
+            font-size: 18px;
+            font-weight: 400;
+
+            & svg {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .f_contactDiv {
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    .f_contact_iconbox {
+        width: 50px;
+        height: 50px;
+        background: $primary-color;
+        @include flexProperty;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.09);
+        margin-right: 11px;
+        border-radius: 5px;
+
+        & svg {
+            color: $white-color;
+            font-size: 20px;
+        }
+    }
+
+    .f_contact_detail h5 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+    }
+
+    .f_contact_detail h6 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+
+    .f_getintouch p {
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-color;
+    }
+
+    .sendBox {
+        background: $white-color;
+        padding: 5px 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.09);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        & input {
+            border: none;
+            font-size: 16px;
+            color: $text-color;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        & input:focus {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+
+        & input::placeholder {
+            color: $text-color;
+        }
+
+        & button {
+            width: 50px;
+            height: 40px;
+            background: $primary-color;
+            border: none;
+            border-radius: 5px;
+
+            & svg {
+                font-size: 22px;
+                color: $white-color;
+            }
+        }
+    }
+
+    .copyright {
+        background: $primary-color;
+
+        & p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $white-color;
+        }
+
+        & ul {
+            display: flex;
+            justify-content: end;
+
+
+            & li {
+                margin-left: 25px;
+
+                & a {
+                    color: $white-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+
+// Responsive Css Start 
+
+@media(min-width:1200px) and (max-width:1399px) {}
+
+@media(max-width:1199px) {
+    footer .f_logo {
+        width: 150px;
+    }
+
+    footer .f_links h3,
+    footer .f_getintouch h3 {
+        font-size: 16px;
+    }
+
+    footer .f_contact_detail h5 {
+        font-size: 16px;
+    }
+
+    footer .f_links ul li a {
+        font-size: 15px;
+    }
+
+    footer .f_contact_detail h6 {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:991px) {
+    footer {
+        height: auto;
+
+        & .f_logo {
+            width: 180px;
+        }
+
+        & .copyright ul li {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+@media(max-width:767px) {
+    footer .copyright p {
+        text-align: center;
+    }
+
+    footer .copyright ul {
+        justify-content: center;
+    }
+}
+
+@media(max-width:575px) {}
+
+@media(max-width:390px) {
+    footer .copyright ul {
+        flex-direction: column;
+    }
+
+    footer .f_social_box ul li {
+        height: 45px;
+
+        & a svg {
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media(max-width:320px) {}
+
+
+// Responsive Css Exit 

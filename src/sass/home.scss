@@ -1,0 +1,922 @@
+@import './variable.scss';
+@import './mixin.scss';
+
+
+// Banner Section Css Start
+
+.bannerSec {
+    width: 100%;
+    height: 700px;
+    background-image: url(../assets/images/banner_back_Img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .bnrText h6 {
+        color: $primary-color;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .bnrText h1 {
+        color: $secondary-color;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .bnrText p {
+        color: $text-color;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .watch_story {
+        display: flex;
+        align-items: center;
+
+        & h6 {
+            color: $secondary-color;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        & span {
+            color: $text-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .videoPlaybtn {
+            width: 60px;
+            height: 60px;
+            background: #d0c6f7;
+            @include flexProperty;
+            border-radius: 50%;
+            position: relative;
+            animation: myAnimation 3s linear alternate infinite;
+
+            @keyframes myAnimation {
+                0% {
+                    transform: scale(1);
+                    background: $primary-color;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    background: #fff;
+                }
+
+                100% {
+                    transform: scale(1.12);
+                    background: #f7f5ff;
+                }
+
+            }
+
+            & svg {
+                color: $white-color;
+                font-size: 18px;
+                width: 45px;
+                height: 45px;
+                background: $primary-color;
+                padding: 12px;
+                @include flexProperty;
+                border-radius: 50%;
+            }
+        }
+
+
+    }
+
+    .bnrImgBox {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        & .bnrImg {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+        }
+
+    }
+
+    .socialBox {
+        position: absolute;
+        top: 45%;
+        left: -12%;
+        transform: rotate(-90deg);
+
+        & ul {
+            display: flex;
+            list-style-type: disc;
+
+            & li {
+                margin-left: 25px;
+                margin-right: 25px;
+
+                & a {
+                    font-size: 14px;
+                    color: $secondary-color;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+// Banner Section Css Exit 
+
+
+
+
+// About Section Css Start 
+
+.aboutSec {
+    width: 100%;
+    height: auto;
+
+    .aboutLeft {
+        position: relative;
+
+        & .aboutImg {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            position: relative;
+            border-radius: 20px;
+        }
+
+        & .happy_client {
+            padding: 20px;
+            background: $white-color;
+            border-radius: 10px 0px 0px 10px;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+
+            & h4 {
+                font-size: 25px;
+                font-weight: 600;
+                color: $primary-color;
+            }
+
+            & h6 {
+                font-size: 14px;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+
+        }
+
+        & .about_bottom_img_box {
+            position: absolute;
+            top: 80%;
+            left: 75%;
+            padding: 5px;
+            background: $white-color;
+            border-radius: 10px;
+
+
+            & .about_bottom_img {
+                width: 200px;
+                max-width: 410px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+
+    }
+
+    .award_win_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 30px;
+        background: #f7f5ff;
+        border-radius: 20px;
+        box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 12%);
+    }
+
+    .aboutRight {
+        position: relative;
+
+        & .award_block {
+            display: flex;
+            align-items: center;
+
+            & span svg {
+                color: $primary-color;
+                font-size: 25px;
+            }
+
+            & h5 {
+                margin-bottom: 0px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        & .award_win_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            background: #f7f5ff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.12);
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 3px;
+                height: 120px;
+                background: #dbd6db;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        & .watch_story {
+            display: flex;
+            align-items: center;
+
+            & h6 {
+                font-size: 18px;
+                color: $text-color;
+            }
+
+            & span {
+                color: $secondary-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            & .videoPlaybtn {
+                width: 60px;
+                height: 60px;
+                background: #d0c6f7;
+                @include flexProperty;
+                border-radius: 50%;
+                position: relative;
+                animation: myAnimation 3s linear alternate infinite;
+
+                @keyframes myAnimation {
+                    0% {
+                        transform: scale(1);
+                        background: $primary-color;
+                    }
+
+                    50% {
+                        transform: scale(1.2);
+                        background: #fff;
+                    }
+
+                    100% {
+                        transform: scale(1.12);
+                        background: #f7f5ff;
+                    }
+
+                }
+
+                & svg {
+                    color: $white-color;
+                    font-size: 18px;
+                    width: 45px;
+                    height: 45px;
+                    background: $primary-color;
+                    padding: 12px;
+                    @include flexProperty;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+
+// About Section Css Exit 
+
+
+// Services Section Css Start 
+
+
+.serviceSec {
+    width: 100%;
+    height: auto;
+    background-color: $bg-color;
+
+    .progress_skills h6 {
+        color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .serviceImg {
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+        position: relative;
+    }
+
+    .serviceRight {
+        position: relative;
+
+        & .videoPlaybtn {
+            width: 60px;
+            height: 60px;
+            background: #d0c6f7;
+            @include flexProperty;
+            border-radius: 50%;
+            position: absolute;
+            top: 140px;
+            left: 300px;
+            animation: myAnimation 3s linear alternate infinite;
+
+            @keyframes myAnimation {
+                0% {
+                    transform: scale(1);
+                    background: $primary-color;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    background: #fff;
+                }
+
+                100% {
+                    transform: scale(1.12);
+                    background: #f7f5ff;
+                }
+
+            }
+
+            & svg {
+                color: $white-color;
+                font-size: 18px;
+                width: 45px;
+                height: 45px;
+                background: #775AFC;
+                padding: 12px;
+                @include flexProperty;
+                border-radius: 50%;
+            }
+        }
+    }
+
+
+}
+
+
+
+// Services Section Css Exit
+
+
+
+// Counter Section Css Start 
+
+.counterSec {
+    width: 100%;
+    height: 150px;
+    background-image: url('../assets/images/counter_back_img.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .counterBox {
+        display: flex;
+        align-items: center;
+
+        & .countIcon {
+            width: 120px;
+            margin-right: 15px;
+        }
+
+        & .counttextBox span {
+            color: $white-color;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        & .counttextBox h6 {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    }
+
+
+
+
+
+
+}
+
+// Counter Section Css Exit 
+
+
+// Whychoose Section Css Start 
+
+.whychooseSec {
+    width: 100%;
+    height: auto;
+
+    .whychooseImg {
+        width: 100%;
+        height: 450px;
+        object-fit: contain;
+        position: relative;
+    }
+
+    .approachInner {
+        display: flex;
+
+        & .approachIcons {
+            width: 60px;
+            object-fit: cover;
+        }
+
+        & .approachDetail {
+            margin-left: 15px;
+
+            & h5 {
+                font-size: 18px;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+
+            & p {
+                color: $text-color;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+
+    }
+}
+
+
+
+// Whychoose Section Css Exit 
+
+
+// Team Section Css Start 
+
+.teamSec {
+    width: 100%;
+    height: 650px;
+    background-image: url('../assets/images/team_back_img.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
+    // Team Slider Css Start
+
+    & .swiper {
+        width: 100%;
+        height: 100%;
+        // padding: 0px 50px;
+        position: relative;
+
+        & .swiper-slide {
+            height: auto;
+            margin-bottom: 70px;
+
+            & img {
+                display: block;
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+
+        & span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+            width: 15px;
+            height: 15px;
+            background-color: $primary-color;
+            position: relative;
+        }
+
+        & span.swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            background-color: $text-color;
+            position: relative;
+        }
+
+        & .swiper-button-prev {
+            position: absolute;
+            top: 150px;
+            left: 10px;
+            transform: rotate(180deg);
+            z-index: 1;
+        }
+
+        & .swiper-button-prev:after {
+            color: $text-color;
+            font-size: 25px;
+        }
+
+        & .swiper-button-next {
+            position: absolute;
+            top: 150px;
+            right: 10px;
+            z-index: 1;
+        }
+
+        & .swiper-button-next::after {
+            font-size: 25px;
+            color: $text-color;
+        }
+
+    }
+
+    // Team Slider Css Exit 
+
+
+    .teamCard.card {
+        width: 100%;
+        height: auto;
+        background: $white-color;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.09);
+        transition: all .3s ease;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        & .card-title {
+            color: $secondary-color;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        & .card-text {
+            color: $text-color;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        & button.socialbtn {
+            width: 55px;
+            height: 55px;
+            background: #775afc5e;
+            border-radius: 50%;
+            border: none;
+            @include flexProperty;
+            color: $white-color;
+            position: absolute;
+            top: 55%;
+            left: 40%;
+            // transform: translateX(-50%);
+            transition: all .3s ease;
+            opacity: 1;
+            visibility: visible;
+            animation: myAnimation 3s linear alternate infinite;
+
+            @keyframes myAnimation {
+                0% {
+                    transform: scale(1);
+                    background: $primary-color;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    background: #fff;
+                }
+
+                100% {
+                    transform: scale(1.12);
+                    background: #f7f5ff;
+                }
+
+            }
+
+
+
+            & span {
+                width: 40px;
+                height: 40px;
+                background: $primary-color;
+                @include flexProperty;
+                border-radius: 50%;
+
+                & svg {
+                    width: 40px;
+                    height: 40px;
+                    @include flexProperty;
+                    background: $primary-color;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+        & .socialbtnDiv ul {
+            display: flex;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .3s ease;
+            opacity: 0;
+            visibility: hidden;
+
+            & li {
+                margin-right: 5px;
+                margin-left: 5px;
+
+                & a svg {
+                    width: 45px;
+                    height: 45px;
+                    background: $white-color;
+                    color: $primary-color;
+                    padding: 12px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &:hover {
+            background: $primary-color;
+        }
+
+        &:hover .card-title,
+        &:hover .card-text {
+            color: $white-color;
+        }
+
+        &:hover button.socialbtn {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 1s ease;
+        }
+
+        &:hover .socialbtnDiv ul {
+            opacity: 1;
+            visibility: visible;
+            top: 55%;
+            transition: all 1s ease;
+        }
+
+
+
+
+
+    }
+
+
+
+
+}
+
+// Team Section Css Exit 
+
+
+// Contact Us Section Css Start
+
+.contactSec {
+    width: 100%;
+    height: 450px;
+    background-image: url('../assets/images/contact_back_img.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .secHead h6 {
+        color: $white-color;
+    }
+
+    .secHead h2 {
+        color: $white-color;
+        line-height: 40px;
+    }
+
+    .contactInner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button.mainbtn1:hover {
+        background: $white-color;
+        border-color: $white-color;
+        color: $secondary-color;
+    }
+}
+
+// Contact Us Section Css Exit 
+
+
+
+
+
+// Responsive Css Start
+
+
+@media (max-width:1399px) {}
+
+@media (max-width:1199px) {
+    .bannerSec {
+        height: auto;
+
+        & .bnrImgBox .bnrImg {
+            height: 450px;
+        }
+
+        & .bnrText h1 {
+            font-size: 32px;
+        }
+    }
+
+    .aboutSec .aboutLeft .about_bottom_img_box {
+        left: 55%;
+    }
+
+    .counterSec .counterBox .countIcon {
+        width: 80px;
+    }
+
+    .counterSec .counterBox .counttextBox h6 {
+        font-size: 14px;
+    }
+
+    .teamSec .teamCard.card button.socialbtn {
+        top: 35%;
+    }
+
+
+}
+
+@media (max-width:991px) {
+
+    .bannerSec {
+        height: auto;
+
+        .bnrImgBox {
+            position: inherit;
+            text-align: center;
+
+            & .bnrImg {
+                width: 100%;
+                height: 500px;
+                object-fit: fill;
+            }
+        }
+
+        & .bnrText h6 {
+            font-size: 16px;
+        }
+
+        & .bnrText h1 {
+            font-size: 40px;
+        }
+
+    }
+
+    .aboutSec .aboutLeft .about_bottom_img_box {
+        top: 75%;
+        right: 0;
+    }
+
+    .serviceSec .serviceRight .videoPlaybtn {
+        left: 330px;
+    }
+
+    .counterSec {
+        height: auto;
+    }
+
+    .teamSec {
+        height: auto;
+
+        & .teamCard.card button.socialbtn {
+            top: 45%;
+            width: 40px;
+            height: 40px;
+
+            & span {
+                width: 30px;
+                height: 30px;
+
+                & svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        & .teamCard.card .card-title {
+            font-size: 16px;
+        }
+
+    }
+
+
+
+    .contactSec {
+        height: 350px;
+    }
+
+
+
+}
+
+@media (max-width:767px) {
+    .bannerSec .bnrImgBox .bnrImg {
+        height: 350px;
+    }
+
+    .bannerSec .bnrText h1 {
+        font-size: 32px;
+    }
+
+    .serviceSec .serviceRight .videoPlaybtn {
+        left: 240px;
+    }
+
+    .whychooseSec .whychooseImg {
+        height: 350px;
+    }
+}
+
+@media (max-width:575px) {
+    .bannerSec .bnrText h1 {
+        font-size: 25px;
+    }
+
+    .aboutSec .aboutLeft .about_bottom_img_box {
+        top: 63%;
+        left: 20px;
+        right: inherit;
+    }
+
+    .aboutSec .aboutRight .award_win_box {
+        flex-direction: column;
+    }
+
+    .aboutSec .aboutRight .award_win_box::after {
+        display: none;
+    }
+
+    .award_inner {
+        margin-bottom: 20px;
+    }
+
+    .serviceSec .serviceRight .videoPlaybtn {
+        left: 180px;
+    }
+}
+
+
+@media (max-width:390px) {
+    .serviceSec .serviceRight .videoPlaybtn {
+        left: 150px;
+    }
+
+    .contactSec {
+        height: 400px;
+    }
+}
+
+@media (max-width:320px) {
+    .serviceSec .serviceImg {
+        height: 220px;
+    }
+    .serviceSec .serviceRight .videoPlaybtn {
+        left: 125px;
+        top: 85px;
+    }
+}
+
+
+
+// Responsive Css Exit 

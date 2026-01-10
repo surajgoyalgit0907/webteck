@@ -1,0 +1,169 @@
+// @import '~bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './sass/variable.scss';
+@import './sass/mixin.scss';
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-Thin.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow", sans-serif;
+    src: url(./assets/fonts/Barlow-ExtraBold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $white-color;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Barlow", sans-serif;
+}
+
+button.mainbtn1 {
+    color: $white-color;
+    background-color: $primary-color;
+    @include buttonProperty;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white-color;
+    }
+}
+
+.secHead h2 {
+    color: $secondary-color;
+    font-size: 32px;
+    font-weight: 600;
+
+    & span {
+        color: $primary-color;
+        font-weight: 300;
+    }
+}
+
+.secHead p {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.secHead h6 {
+    color: $primary-color;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+@media(max-width:1199px) {
+
+    .secHead h2 {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:991px) {
+
+    .secHead h6 {
+        font-size: 16px;
+    }
+
+    .secHead h2 {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:767px) {
+
+    
+}
+@media(max-width:757px) {
+
+    .secHead h2, .secHead .h2 {
+        font-size: 20px;
+    }
+
+    .secHead p {
+        font-size: 16px;
+    }
+}
+@media(max-width:480px) {
+
+    
+}
+
+@media(max-width:320px) {
+
+    
+}
