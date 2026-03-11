@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://surajgoyalgit0907.github.io/latest-webteck",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
